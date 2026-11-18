@@ -1,0 +1,43 @@
+import sys
+import pygame
+
+
+pygame.init()
+
+
+#screen setup
+screen_w = 1280
+screen_h = 920
+screen = pygame.display.set_mode((screen_w, screen_h))
+pygame.display.set_caption("Music.le")
+
+
+#code loop speed control
+clock = pygame.time.Clock()
+
+#colors
+background_color = (143, 26, 26)  # dark red like a theater curtain
+text_color = (255, 245, 224) # beige white ish
+button_color = (222, 43, 7) # bright redish tone
+button_selected = (252, 44, 8) # even brighter red
+easy_buttons = (156, 214, 86) # easy green
+med_buttons = (58, 175, 199) # medium blue
+hard_buttons = (118, 47, 148) # hard purple
+
+#fonts
+title_font = pygame.font.Font("Fredoka_Condensed-Light.ttf", 80)
+button_font = pygame.font.Font("Fredoka_Condensed-Light.ttf", 60)
+text_font = pygame.font.Font("Fredoka_Condensed-Light.ttf", 35)
+
+
+
+
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    pygame.display.flip()
+pygame.quit()
+sys.exit()
